@@ -1,0 +1,13 @@
+﻿/.vs
+/packages
+/**/bin
+/**/obj
+/TestResults
+/**/*.png
+/**/*.jpg
+/**/*.svg
+/**/*.user
+!/imgs/cell_*.png
+!/imgs/game.png
+!/imgs/design.svg
+/**/PublishProfiles
