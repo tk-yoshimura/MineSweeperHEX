@@ -53,6 +53,10 @@ namespace MineSweeperHEX {
         private void ToolStripLevelHard_Click(object sender, EventArgs e) {
             SetField(gridsize: 12, mines: 64);
         }
+                
+        private void ToolStripLevelExtreme_Click(object sender, EventArgs e) {
+            SetField(gridsize: 14, mines: 128);
+        }
 
         private void ToolStripLevelCustom_Click(object sender, EventArgs e) {
             SettingCustomForm form = new SettingCustomForm() {

@@ -194,7 +194,7 @@ namespace MineSweeperHEX {
                 return;
             }
 
-            if (IsWin) {
+            if (IsWin || IsLose) {
                 return;
             }
 
@@ -207,7 +207,7 @@ namespace MineSweeperHEX {
             };
 
             if (MineState[cell_index] == CellState.Mine) {
-                DiscloseAll();
+                DiscloseAllMines();
                 DisplayState[cell_index] = CellState.Bomb;
             }
             else {
@@ -215,9 +215,11 @@ namespace MineSweeperHEX {
             }
         }
 
-        public void DiscloseAll() {
+        public void DiscloseAllMines() {
             for (int i = 0; i < Grid.Count; i++) {
-                DisplayState[i] = MineState[i];
+                if (MineState[i] == CellState.Mine) {
+                    DisplayState[i] = MineState[i];
+                }
             }
         }
 
@@ -261,7 +263,7 @@ namespace MineSweeperHEX {
                 return;
             }
 
-            if (IsWin) {
+            if (IsWin || IsLose) {
                 return;
             }
 

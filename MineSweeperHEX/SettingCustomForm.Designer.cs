@@ -145,7 +145,7 @@ namespace MineSweeperHEX {
             this.Controls.Add(this.labelGridsize);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SettingCustomForm";
-            this.Text = "MineSweeper HEX CustomGame";
+            this.Text = "CustomGame";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGridSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMines)).EndInit();
             this.ResumeLayout(false);

@@ -34,6 +34,7 @@ namespace MineSweeperHEX {
             this.toolStripLevelNormal = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLevelHard = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLevelCustom = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLevelExtreme = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDiscloseVoid = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelMines = new System.Windows.Forms.ToolStripStatusLabel();
@@ -87,6 +88,7 @@ namespace MineSweeperHEX {
             this.toolStripLevelEasy,
             this.toolStripLevelNormal,
             this.toolStripLevelHard,
+            this.toolStripLevelExtreme,
             this.toolStripLevelCustom});
             this.toolStripLevel.Name = "toolStripLevel";
             this.toolStripLevel.Size = new System.Drawing.Size(169, 22);
@@ -95,30 +97,37 @@ namespace MineSweeperHEX {
             // toolStripLevelEasy
             // 
             this.toolStripLevelEasy.Name = "toolStripLevelEasy";
-            this.toolStripLevelEasy.Size = new System.Drawing.Size(114, 22);
+            this.toolStripLevelEasy.Size = new System.Drawing.Size(116, 22);
             this.toolStripLevelEasy.Text = "Easy";
             this.toolStripLevelEasy.Click += new System.EventHandler(this.ToolStripLevelEasy_Click);
             // 
             // toolStripLevelNormal
             // 
             this.toolStripLevelNormal.Name = "toolStripLevelNormal";
-            this.toolStripLevelNormal.Size = new System.Drawing.Size(114, 22);
+            this.toolStripLevelNormal.Size = new System.Drawing.Size(116, 22);
             this.toolStripLevelNormal.Text = "Normal";
             this.toolStripLevelNormal.Click += new System.EventHandler(this.ToolStripLevelNormal_Click);
             // 
             // toolStripLevelHard
             // 
             this.toolStripLevelHard.Name = "toolStripLevelHard";
-            this.toolStripLevelHard.Size = new System.Drawing.Size(114, 22);
+            this.toolStripLevelHard.Size = new System.Drawing.Size(116, 22);
             this.toolStripLevelHard.Text = "Hard";
             this.toolStripLevelHard.Click += new System.EventHandler(this.ToolStripLevelHard_Click);
             // 
             // toolStripLevelCustom
             // 
             this.toolStripLevelCustom.Name = "toolStripLevelCustom";
-            this.toolStripLevelCustom.Size = new System.Drawing.Size(114, 22);
+            this.toolStripLevelCustom.Size = new System.Drawing.Size(116, 22);
             this.toolStripLevelCustom.Text = "Custom";
             this.toolStripLevelCustom.Click += new System.EventHandler(this.ToolStripLevelCustom_Click);
+            // 
+            // toolStripLevelExtreme
+            // 
+            this.toolStripLevelExtreme.Name = "toolStripLevelExtreme";
+            this.toolStripLevelExtreme.Size = new System.Drawing.Size(116, 22);
+            this.toolStripLevelExtreme.Text = "Extreme";
+            this.toolStripLevelExtreme.Click += new System.EventHandler(this.ToolStripLevelExtreme_Click);
             // 
             // toolStripDiscloseVoid
             // 
@@ -192,6 +201,7 @@ namespace MineSweeperHEX {
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMines;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelDisclose;
         private System.Windows.Forms.ToolStripMenuItem toolStripDiscloseVoid;
+        private System.Windows.Forms.ToolStripMenuItem toolStripLevelExtreme;
     }
 }
 
