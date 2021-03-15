@@ -8,8 +8,11 @@ namespace MineSweeperHEX {
 
         public int Mines { get; private set; } = 16;
 
-        public SettingCustomForm() {
+        public SettingCustomForm(int gridsize, int mines) {
             InitializeComponent();
+
+            numericUpDownGridSize.Value = gridsize;
+            numericUpDownMines.Value = mines;
 
             ChangedGridSize();
         }

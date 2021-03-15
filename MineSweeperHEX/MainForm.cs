@@ -63,7 +63,10 @@ namespace MineSweeperHEX {
         }
 
         private void ToolStripLevelCustom_Click(object sender, EventArgs e) {
-            SettingCustomForm form = new SettingCustomForm() {
+            int current_gridsize = fieldPanel.Field.Size;
+            int current_mines = fieldPanel.Field.MineGenerates;
+
+            SettingCustomForm form = new SettingCustomForm(current_gridsize, current_mines) {
                 StartPosition = FormStartPosition.CenterParent
             };
 
