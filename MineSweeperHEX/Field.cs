@@ -276,6 +276,61 @@ namespace MineSweeperHEX {
             else if (DisplayState[cell_index] == CellState.Locked) {
                 DisplayState[cell_index] = CellState.Unknown;
             }
+            else if(DisplayState[cell_index] != CellState.Void) {
+                IEnumerable<int> links = Grid.Cells[cell_index].IndexList.Select((link) => link.index);
+
+                IEnumerable<int> unknowns = links
+                    .Where((index) => {
+                        CellState state = DisplayState[index];
+                        return state == CellState.Unknown || state == CellState.Fraged || state == CellState.Locked;
+                    });
+
+                IEnumerable<int> mines = links
+                    .Where((index) => {
+                        CellState state = MineState[index];
+                        return state == CellState.Mine;
+                    });
+                
+                if (unknowns.Count() == mines.Count()) {
+                    foreach (int index in unknowns) {
+                        DisplayState[index] = CellState.Fraged;
+                    }
+                }
+            }
+        }
+
+        public void LockConfirmedMines() {
+            if (IsWin || IsLose) {
+                return;
+            }
+
+            for (int i = 0; i < Grid.Count; i++) {
+                if (DisplayState[i] == CellState.Unknown || DisplayState[i] == CellState.Fraged
+                    || DisplayState[i] == CellState.Locked || DisplayState[i] == CellState.Void) {
+
+                    continue;
+                }
+
+                IEnumerable<int> links = Grid.Cells[i].IndexList.Select((link) => link.index);
+
+                IEnumerable<int> unknowns = links
+                    .Where((index) => {
+                        CellState state = DisplayState[index];
+                        return state == CellState.Unknown || state == CellState.Fraged || state == CellState.Locked;
+                    });
+
+                IEnumerable<int> mines = links
+                    .Where((index) => {
+                        CellState state = MineState[index];
+                        return state == CellState.Mine;
+                    });
+                
+                if (unknowns.Count() == mines.Count()) {
+                    foreach (int index in unknowns) {
+                        DisplayState[index] = CellState.Fraged;
+                    }
+                }
+            }
         }
     }
 }

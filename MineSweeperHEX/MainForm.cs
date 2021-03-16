@@ -85,5 +85,10 @@ namespace MineSweeperHEX {
             fieldPanel.DiscloseAllVoids();
             UpdateStatus();
         }
+
+        private void ToolStripLockMines_Click(object sender, EventArgs e) {
+            fieldPanel.LockConfirmedMines();
+            UpdateStatus();
+        }
     }
 }

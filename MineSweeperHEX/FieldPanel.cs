@@ -39,6 +39,11 @@ namespace MineSweeperHEX {
             Invalidate();
         }
 
+        public void LockConfirmedMines() {
+            Field.LockConfirmedMines();
+            Invalidate();
+        }
+
         private void FieldPanel_MouseClick(object sender, MouseEventArgs e) {
             int px = e.X * 2 / CellSize.Width, py = e.Y / CellSize.Height;
             Cell cell = Field.Map(px, py);

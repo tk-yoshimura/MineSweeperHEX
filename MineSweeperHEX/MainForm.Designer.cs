@@ -34,12 +34,13 @@ namespace MineSweeperHEX {
             this.toolStripLevelNormal = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLevelHard = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLevelExtreme = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLevelImpossible = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLevelCustom = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDiscloseVoid = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLockMines = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelMines = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelDisclose = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripLevelImpossible = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,8 @@ namespace MineSweeperHEX {
             this.toolStripGame.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStart,
             this.toolStripLevel,
-            this.toolStripDiscloseVoid});
+            this.toolStripDiscloseVoid,
+            this.toolStripLockMines});
             this.toolStripGame.Name = "toolStripGame";
             this.toolStripGame.Size = new System.Drawing.Size(49, 20);
             this.toolStripGame.Text = "Game";
@@ -79,7 +81,7 @@ namespace MineSweeperHEX {
             this.toolStripStart.Name = "toolStripStart";
             this.toolStripStart.ShortcutKeyDisplayString = "Ctrl+S";
             this.toolStripStart.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.toolStripStart.Size = new System.Drawing.Size(169, 22);
+            this.toolStripStart.Size = new System.Drawing.Size(222, 22);
             this.toolStripStart.Text = "Start";
             this.toolStripStart.Click += new System.EventHandler(this.ToolStripStart_Click);
             // 
@@ -93,50 +95,70 @@ namespace MineSweeperHEX {
             this.toolStripLevelImpossible,
             this.toolStripLevelCustom});
             this.toolStripLevel.Name = "toolStripLevel";
-            this.toolStripLevel.Size = new System.Drawing.Size(169, 22);
+            this.toolStripLevel.Size = new System.Drawing.Size(222, 22);
             this.toolStripLevel.Text = "Level";
             // 
             // toolStripLevelEasy
             // 
             this.toolStripLevelEasy.Name = "toolStripLevelEasy";
-            this.toolStripLevelEasy.Size = new System.Drawing.Size(130, 22);
+            this.toolStripLevelEasy.Size = new System.Drawing.Size(154, 22);
             this.toolStripLevelEasy.Text = "Easy";
             this.toolStripLevelEasy.Click += new System.EventHandler(this.ToolStripLevelEasy_Click);
             // 
             // toolStripLevelNormal
             // 
             this.toolStripLevelNormal.Name = "toolStripLevelNormal";
-            this.toolStripLevelNormal.Size = new System.Drawing.Size(130, 22);
+            this.toolStripLevelNormal.Size = new System.Drawing.Size(154, 22);
             this.toolStripLevelNormal.Text = "Normal";
             this.toolStripLevelNormal.Click += new System.EventHandler(this.ToolStripLevelNormal_Click);
             // 
             // toolStripLevelHard
             // 
             this.toolStripLevelHard.Name = "toolStripLevelHard";
-            this.toolStripLevelHard.Size = new System.Drawing.Size(130, 22);
+            this.toolStripLevelHard.Size = new System.Drawing.Size(154, 22);
             this.toolStripLevelHard.Text = "Hard";
             this.toolStripLevelHard.Click += new System.EventHandler(this.ToolStripLevelHard_Click);
             // 
             // toolStripLevelExtreme
             // 
             this.toolStripLevelExtreme.Name = "toolStripLevelExtreme";
-            this.toolStripLevelExtreme.Size = new System.Drawing.Size(130, 22);
+            this.toolStripLevelExtreme.Size = new System.Drawing.Size(154, 22);
             this.toolStripLevelExtreme.Text = "Extreme";
             this.toolStripLevelExtreme.Click += new System.EventHandler(this.ToolStripLevelExtreme_Click);
+            // 
+            // toolStripLevelImpossible
+            // 
+            this.toolStripLevelImpossible.Name = "toolStripLevelImpossible";
+            this.toolStripLevelImpossible.Size = new System.Drawing.Size(154, 22);
+            this.toolStripLevelImpossible.Text = "Impossible";
+            this.toolStripLevelImpossible.Click += new System.EventHandler(this.ToolStripLevelImpossible_Click);
             // 
             // toolStripLevelCustom
             // 
             this.toolStripLevelCustom.Name = "toolStripLevelCustom";
-            this.toolStripLevelCustom.Size = new System.Drawing.Size(130, 22);
+            this.toolStripLevelCustom.ShortcutKeyDisplayString = "Ctrl+C";
+            this.toolStripLevelCustom.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.toolStripLevelCustom.Size = new System.Drawing.Size(154, 22);
             this.toolStripLevelCustom.Text = "Custom";
             this.toolStripLevelCustom.Click += new System.EventHandler(this.ToolStripLevelCustom_Click);
             // 
             // toolStripDiscloseVoid
             // 
             this.toolStripDiscloseVoid.Name = "toolStripDiscloseVoid";
-            this.toolStripDiscloseVoid.Size = new System.Drawing.Size(169, 22);
+            this.toolStripDiscloseVoid.ShortcutKeyDisplayString = "Ctrl+D";
+            this.toolStripDiscloseVoid.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.toolStripDiscloseVoid.Size = new System.Drawing.Size(222, 22);
             this.toolStripDiscloseVoid.Text = "Disclose void cells";
             this.toolStripDiscloseVoid.Click += new System.EventHandler(this.ToolStripDiscloseVoid_Click);
+            // 
+            // toolStripLockMines
+            // 
+            this.toolStripLockMines.Name = "toolStripLockMines";
+            this.toolStripLockMines.ShortcutKeyDisplayString = "Ctrl+F";
+            this.toolStripLockMines.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.toolStripLockMines.Size = new System.Drawing.Size(222, 22);
+            this.toolStripLockMines.Text = "Lock cofirmed mines";
+            this.toolStripLockMines.Click += new System.EventHandler(this.ToolStripLockMines_Click);
             // 
             // statusStrip
             // 
@@ -164,13 +186,6 @@ namespace MineSweeperHEX {
             this.toolStripStatusLabelDisclose.Size = new System.Drawing.Size(50, 17);
             this.toolStripStatusLabelDisclose.Text = "Disclose";
             this.toolStripStatusLabelDisclose.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // toolStripLevelImpossible
-            // 
-            this.toolStripLevelImpossible.Name = "toolStripLevelImpossible";
-            this.toolStripLevelImpossible.Size = new System.Drawing.Size(130, 22);
-            this.toolStripLevelImpossible.Text = "Impossible";
-            this.toolStripLevelImpossible.Click += new System.EventHandler(this.ToolStripLevelImpossible_Click);
             // 
             // MainForm
             // 
@@ -212,6 +227,7 @@ namespace MineSweeperHEX {
         private System.Windows.Forms.ToolStripMenuItem toolStripDiscloseVoid;
         private System.Windows.Forms.ToolStripMenuItem toolStripLevelExtreme;
         private System.Windows.Forms.ToolStripMenuItem toolStripLevelImpossible;
+        private System.Windows.Forms.ToolStripMenuItem toolStripLockMines;
     }
 }
 
